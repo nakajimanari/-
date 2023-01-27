@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+<meta charset="utf=8">
+<title>WCB Cafe</title>
+<mate name="description" content="ブレンドコーヒーとヘルシーなオーガニックフードを提供するカフェ">
+
+<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&family=Philosopher:ital,wght@0,400;0,700;1,400&family=Rubik+Bubbles&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<style>
+    .btn-menu{
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        border: 1px solid rgba(250, 90, 90, 0.5);
+        color:rgb(167, 59, 29);
+        padding: 0.5rem 1rem;
+    }
+    .main-nav {
+        width: 0;
+        position: absolute;
+        top: 25px;
+        right: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        display: block;
+      }
+      .main-nav li {
+        text-align: center;
+        margin: 1.5rem 0;
+      }
+      .main-nav.open-menu {
+        width: 200px;
+      }
+</style>
+
+</head>
+<body>
+    <div id="home" class="big-bg">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+<header class="page-header wrapper">
+<h1>
+    <a href="index.html"><img class="logo" src="images/logo.svg" alt="WCBカフェ ホーム"></a></h1>
+<nav>
+    <button class="btn-menu">Menu</button>
+    <ul class="main-nav">
+        <li><a href="news.html">News</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+        </nav>
+     </header>
+</nav>
+</header>
+
+<div class="home-content wrapper">
+    <h2 class="page-title">We'll Make Your Day</h2>
+    <P>おしゃれなカフェで癒されてみませんか？無添加の食材で体の中からリフレッシュ。</P>
+    <a class="button" href="menu.html">メニューを見る</a>
+</div><!--/.home.comente-->
+</div><!--/#home-->
+    </body>
+<script>
+    const btn=document.querySelector(".btn-menu");
+    const nav=document.querySelector(".main-nav");
+    btn.addEventListener("click",()=>{
+        nav.classList.toggle("open-menu");
+        if (btn.innerHTML === "Menu") {
+            btn.innerHTML = "Close";
+        }else {
+            btn.innerHTML = "Menu";
+        }
+    });
+    </script>
+</html>
